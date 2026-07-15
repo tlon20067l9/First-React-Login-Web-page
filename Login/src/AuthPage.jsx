@@ -241,13 +241,27 @@ export default function AuthPage() {
   const [view, setView] = useState("login");
 
   return (
-    <div className="auth-page-wrap">
-      <div className="auth-card">
-        {view === "login" && <LoginView goto={setView} />}
-        {view === "register" && <RegisterView goto={setView} />}
-        {view === "forgot" && <ForgotView goto={setView} />}
-        {view === "reset" && <ResetView goto={setView} />}
-      </div>
+    <div className="site-shell">
+      <header className="site-nav">
+        <nav className="site-nav-links">
+          <a href="#">Trang chủ</a>
+          <a href="#">Tính năng</a>
+          <a href="#">Về chúng tôi</a>
+        </nav>
+      </header>
+
+      <main className="site-main">
+        <div className="site-hero"></div>
+
+        <div className="auth-page-wrap">
+          <div className="auth-card">
+            {view === "login" && <LoginView goto={setView} />}
+            {view === "register" && <RegisterView goto={setView} />}
+            {view === "forgot" && <ForgotView goto={setView} />}
+            {view === "reset" && <ResetView goto={setView} />}
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
