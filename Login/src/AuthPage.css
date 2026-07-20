@@ -83,7 +83,7 @@ html {
   display: flex;
   flex-direction: column;
   background-color: var(--bg);
-  background-image: url('/LunaBD_2025.png');  
+  background-image: url('/1784115744567_4603010674078918304_g4153041264920716259_8ad51068e6c662ed6fdd91c5b05deecd.jpg');  
   background-size: cover;                                    
   background-position: center;                                
   background-repeat: no-repeat;
@@ -113,47 +113,6 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .site-shell::before { animation: none; }
 }
-
-/* ---- nav ----
-   Nền kính mờ nhẹ, chỉ đủ tách chữ ra khỏi ảnh nền phía sau,
-   không phủ trắng đục làm mờ hết ảnh. */
-.site-nav {
-  position: relative; z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 18px clamp(20px, 5vw, 64px);
-  background-color: rgba(255, 255, 255, .12);
-  backdrop-filter: blur(6px) saturate(140%);
-  -webkit-backdrop-filter: blur(6px) saturate(140%);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .25), 0 4px 20px -8px rgba(0, 0, 0, .25);
-  border-bottom: none;
-}
-.site-nav-brand {
-  display: flex; align-items: center; gap: 10px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
-  font-size: 16.5px;
-  letter-spacing: -.2px;
-}
-.site-nav-brand .brand-mark {
-  width: 28px; height: 28px; border-radius: 9px;
-  background: linear-gradient(135deg, var(--primary), var(--blob-b) 120%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
-}
-.site-nav-links { display: flex; gap: 28px; }
-.site-nav-links a {
-  font-size: 14px; font-weight: 600; color: var(--text); text-decoration: none;
-  padding: 7px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .55);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
-  transition: background .15s, transform .15s;
-}
-.site-nav-links a:hover { background: rgba(255, 255, 255, .8); transform: translateY(-1px); }
-@media (max-width: 700px) { .site-nav-links { display: none; } }
 
 /* ---- main: hero copy + auth card side by side ---- */
 .site-main {
@@ -343,35 +302,6 @@ button.submit:hover {
   transform: translateY(-1px);
 }
 button.submit:active { transform: translateY(1px); filter: brightness(.97); }
-
-/* ---- social login (Google / Facebook) ---- */
-.social-divider {
-  display: flex; align-items: center; gap: 12px;
-  margin: 24px 0 18px;
-  font-size: 12.5px; color: var(--muted); font-weight: 500;
-}
-.social-divider::before,
-.social-divider::after {
-  content: ""; flex: 1; height: 1px; background: var(--border);
-}
-.social-buttons { display: flex; flex-direction: column; gap: 10px; }
-.social-btn {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  width: 100%; padding: 11px 14px;
-  border: 1.5px solid var(--border);
-  border-radius: 12px;
-  background: var(--input-bg);
-  color: var(--text);
-  font-size: 14px; font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color .15s ease, background .15s ease, transform .15s ease;
-}
-.social-btn:hover {
-  border-color: color-mix(in srgb, var(--border) 30%, var(--primary));
-  background: var(--primary-light);
-}
-.social-btn:active { transform: translateY(1px); }
 
 .footer { text-align: center; font-size: 13.5px; color: var(--muted); margin-top: 22px; }
 
